@@ -33,62 +33,16 @@ Reginald describes the shock of Partition upon the residents of Lahore and his f
 <!--[if lte IE 6]>
 <link rel="stylesheet" media="all" type="text/css" href="/css/ie6.css" />
 <![endif]-->
-<script language="javascript" type="text/javascript" src="/script/swfobject.js"></script>
 <script language="javascript" type="text/javascript" src="/script/jquery-latest.js"></script>
 <!-- colorbox js files //-->
-<script type="text/javascript" src="/script/jquery.colorbox.js"></script>
-<script type="text/javascript" src="/script/colorbox-settings.js"></script>
-<script type="text/javascript" src="/script/tna-js-lib.js"></script>
 <script type="text/javascript" src="/script/education-show-hide.js"></script> 
+<script src="/scripts/jwplayer-7/jwplayer.js"></script>
+<script>jwplayer.key="QXMXbKME8X1tWpCl1xbScn2D5vVQjSDcHSMHZLVk7X8=";</script>
 
 
 
 
-<script type="text/javascript">
-    <!--//
-      var flashvars =
-      {
 
-
-        file:                     '/swf/reginald-massey.flv',
-
-
-
-        image:                    '/images/exhibitions/reginald-screengrab.jpg',
-        title:                    'Reginald',
-        author:                   'The National Archives',
-        description:              'Reginald',
-        stretching:               '',
-        logo:                     '',
-        
-        
-        'plugins':                'captions-1',
-        
-        
-        'captions.fontsize':      '12',
-        'captions.state':         'true',
-        'captions.back':          'true',
-        'captions.file':           encodeURIComponent('/xml/reginald.xml')
-         
-        
-        
-
-      };
-      var params =
-      {
-        allowfullscreen:      'true',
-        allowscriptaccess:    'always',
-        wmode:                'transparent'
-      };
-      var attributes =
-      {
-        id:                   'player',
-        name:                 'player'
-      };
-      swfobject.embedSWF("/swf/player.swf", "player", "600", "486", "9.0.0", false, flashvars, params, attributes);
-    //-->
-    </script>
- <script type="text/javascript" src="/script/webtrends-player.js"></script>
 <script language="javascript" type="text/javascript">
 function openW(mypage,myname,w,h,features) {
 if(screen.width){
@@ -311,6 +265,30 @@ win.window.focus();
             <!--#include virtual="/includes/footercms.inc"-->
         
 </div></div></div>
+
+<script type="text/javascript">
+	var filename 	= '/swf/reginald-massey.flv';
+	var fileimg 	= '/images/exhibitions/reginald-screengrab.jpg';
+	var filetitle	= 'Reginald';
+	var fileauth	= 'The National Archives';
+	var captions	= '/xml/reginald.xml';
+
+	jwplayer("player").setup({
+		width:600,
+		height:450,
+		stretching: 'uniform',
+		playlist: [{
+	        file:filename,
+			image: fileimg,
+			tracks: [{
+				file: captions
+			}]
+		}]
+      });
+
+</script>
+
+
 </body>
 </html>
 

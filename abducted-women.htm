@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head><!-- PageID 23404 - published by Open Text Web Solutions 10.1 - 10.1.1.312 - 28349 -->
@@ -31,62 +30,16 @@
 <!--[if lte IE 6]>
 <link rel="stylesheet" media="all" type="text/css" href="/css/ie6.css" />
 <![endif]-->
-<script language="javascript" type="text/javascript" src="/script/swfobject.js"></script>
 <script language="javascript" type="text/javascript" src="/script/jquery-latest.js"></script>
 <!-- colorbox js files //-->
-<script type="text/javascript" src="/script/jquery.colorbox.js"></script>
-<script type="text/javascript" src="/script/colorbox-settings.js"></script>
-<script type="text/javascript" src="/script/tna-js-lib.js"></script>
 <script type="text/javascript" src="/script/education-show-hide.js"></script> 
+<script src="/scripts/jwplayer-7/jwplayer.js"></script>
+<script>jwplayer.key="QXMXbKME8X1tWpCl1xbScn2D5vVQjSDcHSMHZLVk7X8=";</script>
 
 
 
 
-<script type="text/javascript">
-    <!--//
-      var flashvars =
-      {
 
-
-        file:                     '/swf/abducted-women.flv',
-
-
-
-        image:                    '/images/exhibitions/abducted-women-screengrab.jpg',
-        title:                    'Abducted women',
-        author:                   'The National Archives',
-        description:              'Abducted women',
-        stretching:               '',
-        logo:                     '',
-        
-        
-        'plugins':                'captions-1',
-        
-        
-        'captions.fontsize':      '12',
-        'captions.state':         'true',
-        'captions.back':          'true',
-        'captions.file':           encodeURIComponent('/xml/abducted-women.xml')
-         
-        
-        
-
-      };
-      var params =
-      {
-        allowfullscreen:      'true',
-        allowscriptaccess:    'always',
-        wmode:                'transparent'
-      };
-      var attributes =
-      {
-        id:                   'player',
-        name:                 'player'
-      };
-      swfobject.embedSWF("/swf/player.swf", "player", "600", "486", "9.0.0", false, flashvars, params, attributes);
-    //-->
-    </script>
- <script type="text/javascript" src="/script/webtrends-player.js"></script>
 <script language="javascript" type="text/javascript">
 function openW(mypage,myname,w,h,features) {
 if(screen.width){
@@ -151,15 +104,13 @@ win.window.focus();
         
         
         <div id="holder">
-          
-        
-     
-                
                 
                     <h2 id="video-title"> Abducted women</h2>
                 
                 
             <div id="player">To view this film, you will require <a href="http://www.adobe.com/products/flashplayer/" class="external-link">Adobe Flash 9</a> or higher and must have <strong>Javascript enabled</strong>.</div>
+
+
             <p id="video-intro">
                 
                 
@@ -298,6 +249,30 @@ win.window.focus();
             <!--#include virtual="/includes/footercms.inc"-->
         
 </div></div></div>
+
+<script type="text/javascript">
+	var filename 	= '/swf/abducted-women.flv';
+	var fileimg 	= '/images/exhibitions/abducted-women-screengrab.jpg';
+	var filetitle	= 'Abducted women';
+	var fileauth	= 'The National Archives';
+	var captions	= '/xml/abducted-women.xml';
+
+	jwplayer("player").setup({
+		width:600,
+		height:450,
+		stretching: 'uniform',
+		playlist: [{
+	        file:filename,
+			image: fileimg,
+			tracks: [{
+				file: captions
+			}]
+		}]
+      });
+
+</script>
+
+
 </body>
 </html>
 
