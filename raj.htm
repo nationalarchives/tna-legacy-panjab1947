@@ -4,6 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head><!-- PageID 23412 - published by Open Text Web Solutions 10.1 - 10.1.1.312 - 28349 -->
 <title>Tilak Raj | The National Archives</title>
+<!--#include virtual="/includes/google-analytics-gtm-head.inc" -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="DC.language" content="ENG" />
 <meta name="DC.identifier" scheme="DCTERMS.URI" content=" http://www.nationalarchives.gov.uk" />
@@ -31,62 +32,16 @@
 <!--[if lte IE 6]>
 <link rel="stylesheet" media="all" type="text/css" href="/css/ie6.css" />
 <![endif]-->
-<script language="javascript" type="text/javascript" src="/script/swfobject.js"></script>
 <script language="javascript" type="text/javascript" src="/script/jquery-latest.js"></script>
 <!-- colorbox js files //-->
-<script type="text/javascript" src="/script/jquery.colorbox.js"></script>
-<script type="text/javascript" src="/script/colorbox-settings.js"></script>
-<script type="text/javascript" src="/script/tna-js-lib.js"></script>
 <script type="text/javascript" src="/script/education-show-hide.js"></script> 
+<script src="/scripts/jwplayer-7/jwplayer.js"></script>
+<script>jwplayer.key="QXMXbKME8X1tWpCl1xbScn2D5vVQjSDcHSMHZLVk7X8=";</script>
 
 
 
 
-<script type="text/javascript">
-    <!--//
-      var flashvars =
-      {
 
-
-        file:                     '/swf/tilak-raj-betab.flv',
-
-
-
-        image:                    '/images/exhibitions/raj-screengrab.jpg',
-        title:                    'Raj',
-        author:                   'The National Archives',
-        description:              'Raj',
-        stretching:               '',
-        logo:                     '',
-        
-        
-        'plugins':                'captions-1',
-        
-        
-        'captions.fontsize':      '12',
-        'captions.state':         'true',
-        'captions.back':          'true',
-        'captions.file':           encodeURIComponent('/xml/raj.xml')
-         
-        
-        
-
-      };
-      var params =
-      {
-        allowfullscreen:      'true',
-        allowscriptaccess:    'always',
-        wmode:                'transparent'
-      };
-      var attributes =
-      {
-        id:                   'player',
-        name:                 'player'
-      };
-      swfobject.embedSWF("/swf/player.swf", "player", "600", "486", "9.0.0", false, flashvars, params, attributes);
-    //-->
-    </script>
- <script type="text/javascript" src="/script/webtrends-player.js"></script>
 <script language="javascript" type="text/javascript">
 function openW(mypage,myname,w,h,features) {
 if(screen.width){
@@ -107,6 +62,7 @@ win.window.focus();
 </head>
 <!--#include virtual="/includes/ga.inc" -->
 <body>
+<!--#include virtual="/includes/google-analytics-gtm-body.inc" -->
 
 
     <div id="gold-wrapper" class="level3">
@@ -313,6 +269,30 @@ win.window.focus();
             <!--#include virtual="/includes/footercms.inc"-->
         
 </div></div></div>
+
+<script type="text/javascript">
+	var filename 	= '/swf/tilak-raj-betab.mp4';
+	var fileimg 	= '/images/exhibitions/raj-screengrab.jpg';
+	var filetitle	= 'Raj';
+	var fileauth	= 'The National Archives';
+	var captions	= '/xml/raj.xml';
+
+	jwplayer("player").setup({
+		width:600,
+		height:450,
+		stretching: 'uniform',
+		playlist: [{
+	        file:filename,
+			image: fileimg,
+			tracks: [{
+				file: captions
+			}]
+		}]
+      });
+
+</script>
+
+
 </body>
 </html>
 
